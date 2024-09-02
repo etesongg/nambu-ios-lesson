@@ -11,13 +11,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     
-    let bts = ["진", "슈가", "제이홉", "RM", "지민", "뷔", "정국"]
+    let bts = ["RM", "진", "슈가", "제이홉", "지민", "뷔", "정국"]
     let btsImages = ["bts1","bts2","bts3","bts4","bts5","bts6","bts7"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        picker.dataSource = self // 피커 뷰에 표시할 데이터를 제공 numberOfComponents(in:), numberOfRowsInComponent(_:), titleForRow(_:forComponent:)
-        picker.delegate = self // 피커 뷰의 이벤트(예: 행 선택 시) 처리를 담당하도록 설정 didSelectRow(_:inComponent:)
+        picker.dataSource = self // 피커 뷰에 표시할 메서드를 제공 numberOfComponents(in:), numberOfRowsInComponent(_:)
+        picker.delegate = self // 피커 뷰의 이벤트(예: 행 선택 시) 처리를 담당하도록 설정 titleForRow(_:forComponent:), didSelectRow(_:inComponent:)
     }
     
     // 피커 본문 내용
@@ -57,7 +57,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         lblTitle.text = "\(component)번째 컴포넌트 \(row)번째 로우 "
     }
     
-
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        2
+    }
+    
     // pickerView는 컴포넌트 갯수 만큼 실행됨, 컴포넌트 각각 row가 몇개인지 알아야 하기 때문
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
@@ -66,9 +69,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             return btsImages.count
         }
     }
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        2
-    }
-    
+ 
 }
 
