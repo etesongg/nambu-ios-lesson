@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         btsImages.count
     }
+    // row 틀 안에 cell 내용이 들어감
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var content = cell.defaultContentConfiguration() // 만들어서 반환하는 애가 구조체(최고부모 보면 struct로 선언되어 있음)이기 때문에 var로 선언해야함
@@ -31,8 +32,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         content.secondaryText = "\(indexPath.row+1)번째"
         content.textProperties.color = UIColor.blue
         content.secondaryTextProperties.color = UIColor.red
-    
         cell.contentConfiguration = content
+        
         return cell
     }
   
