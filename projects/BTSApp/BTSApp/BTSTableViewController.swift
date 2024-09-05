@@ -44,6 +44,7 @@ class BTSTableViewController: UITableViewController {
         let member:[String:String] = bts[indexPath.row] // ["desc": "1번째 멤버", "name": "RM", "image": "bts1"]
         let imageView = cell.viewWithTag(1) as? UIImageView
         // 이미지네임은 꼭 언래핑을 해줘야 해서 처리해준거임
+        // 딕셔너리는 옵셔널을 반환하기 때문에 UIImage(named:)는 nil을 반환할 수도 있어 named값을 미리 처리 해주고 대입하는거임
         if let image = member["image"] { // image = bts1
             imageView?.image = UIImage(named: image) // (named: image)
         }
@@ -102,6 +103,10 @@ class BTSTableViewController: UITableViewController {
             return
         }
         newVC.member = bts[indexPath.row]
+        
+        // 어레이일 경우
+//        newVC.imageName = btsImages[indexPath.row]
+//        newVC.memberName = bts[indexPath.row]
     }
 
 

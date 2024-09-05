@@ -48,9 +48,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="button1" destination="KWB-l5-qMg" id="EV0-cg-p4J"/>
-                        <outlet property="button2" destination="p5H-mw-X6W" id="5X1-G9-BiV"/>
-                        <outlet property="button3" destination="NFp-gw-mfJ" id="B0v-DI-ISs"/>
                         <outlet property="webView" destination="yrh-c0-iAz" id="WEL-hz-yGa"/>
                     </connections>
                 </viewController>
