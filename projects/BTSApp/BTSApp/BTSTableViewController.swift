@@ -41,12 +41,11 @@ class BTSTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bts", for: indexPath)
         // 데이터가 딕셔너리 형태면 이렇게 해야함
-        let member:[String:String] = bts[indexPath.row]
-        
+        let member:[String:String] = bts[indexPath.row] // ["desc": "1번째 멤버", "name": "RM", "image": "bts1"]
         let imageView = cell.viewWithTag(1) as? UIImageView
         // 이미지네임은 꼭 언래핑을 해줘야 해서 처리해준거임
-        if let image = member["image"] {
-            imageView?.image = UIImage(named: image)
+        if let image = member["image"] { // image = bts1
+            imageView?.image = UIImage(named: image) // (named: image)
         }
         let lblNick = cell.viewWithTag(2) as? UILabel
         lblNick?.text = member["name"]
@@ -98,11 +97,10 @@ class BTSTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let newVC = segue.destination as? DetailViewController // newVC의 타입은 DetailViewController?이 됨
-        guard let newVC = newVC, let indexPath = tableView.indexPathForSelectedRow else { // nil이면 빠져나감, 이때는 guard let이 알맞음
+        let newVC = segue.destination as? DetailViewController // 전환될 뷰 컨트롤러 지정, newVC의 타입은 DetailViewController?이 됨
+        guard let newVC = newVC, let indexPath = tableView.indexPathForSelectedRow else { // guard let 구문을 사용하여 옵셔널 바인딩 함, newVC가 nil이면 빠져나감, 이때는 guard let이 알맞음
             return
         }
-        
         newVC.member = bts[indexPath.row]
     }
 
