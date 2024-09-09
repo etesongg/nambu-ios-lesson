@@ -47,9 +47,10 @@ class BookTableViewController: UITableViewController {
             }
             guard let data else { return }
             do {
-                guard let root = try JSONSerialization.jsonObject(with: data) as? [String:Any] // 직렬화 풀기, root에는 documents, meta가 있음 전자는 어레이를 후자는 오브젝트를 가지고 있음
+                guard let root = try JSONSerialization.jsonObject(with: data) as? [String:Any] // 직렬화 풀기, root에는 documents, meta가 있음 전자는 어레이를 후자는 오브젝트를 가지고 있음 jsonArray??
                 else { return }
                 self.documents = root["documents"] as? [[String:Any]] // root["documents"]의 타입은 Any타입임 그래서 우리가 원래 바꾸고 싶었던 대로 [[String:Any]]타입으로 타입캐스팅 해줘야 함
+                print(self.documents)
                 if let meta = root["meta"] as? [String:Any],
                    let isEnd = meta["is_end"] as? Bool {
                     DispatchQueue.main.async {
@@ -59,7 +60,7 @@ class BookTableViewController: UITableViewController {
                 DispatchQueue.main.async{
                     self.tableView.reloadData()
                 }
-            } catch {
+            } catch { // try catch를 사용하면 앱이 falsebtn죽지 않음 실제는 알럿을 띠움
                 print("JSON Parsing error 발생")
             }
         }
