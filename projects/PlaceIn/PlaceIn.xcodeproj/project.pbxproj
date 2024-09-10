@@ -14,6 +14,9 @@
 		E43526C22C8E9C6200246F8C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E43526C12C8E9C6200246F8C /* Base */; };
 		E43526CA2C8E9E9700246F8C /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43526C92C8E9E9700246F8C /* LaunchScreenViewController.swift */; };
 		E43526CC2C8E9EFF00246F8C /* FestaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43526CB2C8E9EFF00246F8C /* FestaTableViewController.swift */; };
+		E4756A692C8FE03A00D2931B /* FestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4756A682C8FE03A00D2931B /* FestaViewController.swift */; };
+		E4756A6B2C900D7900D2931B /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4756A6A2C900D7900D2931B /* AddInfoViewController.swift */; };
+		E4A0776B2C8F49240052C9A9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0776A2C8F49240052C9A9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		E43526C32C8E9C6200246F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E43526C92C8E9E9700246F8C /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E43526CB2C8E9EFF00246F8C /* FestaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestaTableViewController.swift; sourceTree = "<group>"; };
+		E4756A682C8FE03A00D2931B /* FestaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestaViewController.swift; sourceTree = "<group>"; };
+		E4756A6A2C900D7900D2931B /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		E4A0776A2C8F49240052C9A9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 		E43526B42C8E9C6100246F8C /* PlaceIn */ = {
 			isa = PBXGroup;
 			children = (
+				E4756A682C8FE03A00D2931B /* FestaViewController.swift */,
+				E4756A6A2C900D7900D2931B /* AddInfoViewController.swift */,
+				E4A0776A2C8F49240052C9A9 /* DetailViewController.swift */,
 				E43526CB2C8E9EFF00246F8C /* FestaTableViewController.swift */,
 				E43526C92C8E9E9700246F8C /* LaunchScreenViewController.swift */,
 				E43526B52C8E9C6100246F8C /* AppDelegate.swift */,
@@ -143,8 +152,11 @@
 			files = (
 				E43526CC2C8E9EFF00246F8C /* FestaTableViewController.swift in Sources */,
 				E43526B62C8E9C6100246F8C /* AppDelegate.swift in Sources */,
+				E4756A692C8FE03A00D2931B /* FestaViewController.swift in Sources */,
+				E4A0776B2C8F49240052C9A9 /* DetailViewController.swift in Sources */,
 				E43526CA2C8E9E9700246F8C /* LaunchScreenViewController.swift in Sources */,
 				E43526B82C8E9C6100246F8C /* SceneDelegate.swift in Sources */,
+				E4756A6B2C900D7900D2931B /* AddInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
