@@ -10,14 +10,13 @@ import UIKit
 class BTSTableViewController: UITableViewController {
 //    let btsImages = ["bts1","bts2","bts3","bts4","bts5","bts6","bts7"]
 //    let bts = ["RM", "진", "슈가", "제이홉", "지민", "뷔", "정국"]
-    let bts:[[String:String]] = [
-        ["name":"RM","image":"bts1","desc":"1번째 멤버"],
-        ["name":"진","image":"bts2","desc":"2번째 멤버"],
-        ["name":"슈가","image":"bts3","desc":"3번째 멤버"],
-        ["name":"제이홉","image":"bts4","desc":"4번째 멤버"],
-        ["name":"지민","image":"bts5","desc":"5번째 멤버"],
-        ["name":"뷔","image":"bts6","desc":"6번째 멤버"],
-        ["name":"정국","image":"bts7","desc":"7번째 멤버"]]
+    let bts = [["stage_name":"RM", "name":"김남준", "image":"bts1"],
+                ["stage_name":"진", "name":"김석진", "image":"bts2"],
+                ["stage_name":"슈가", "name":"민윤기", "image":"bts3"],
+                ["stage_name":"제이홉", "name":"정호석", "image":"bts4"],
+                ["stage_name":"지민", "name":"박지민", "image":"bts5"],
+                ["stage_name":"뷔", "name":"김태형", "image":"bts6"],
+                ["stage_name":"정국", "name":"전정국", "image":"bts7"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

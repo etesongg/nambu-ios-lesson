@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  BookFinder
+//
+//  Created by 정송희 on 9/6/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APIKey = KakaoAK f7c7112906d3b52496f962ae3ea546bb

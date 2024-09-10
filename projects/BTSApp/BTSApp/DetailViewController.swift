@@ -16,7 +16,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblNick: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         if let imageName = member?["image"] {
+=======
+        lblNick.text = member?["stage_name"] // 받아온 member가 옵셔널이기 때문에 옵셔널 처리를 해줘야 함
+        if let imageName = member?["image"] { // 변수명을 하나로 쓸 수 있음
+>>>>>>> 66383ed (open api, BookFinder)
             imageProfile.image = UIImage(named: imageName)
         }
         lblNick.text = member?["stage-name"] // 받아온 member가 옵셔널이기 때문에 옵셔널 처리를 해줘야 함
