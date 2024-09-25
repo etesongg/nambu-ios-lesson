@@ -8,7 +8,7 @@
 // console.log(calc.add(2, 3));
 // console.log(calc.subtract(5, 1));
 
-const calc = require("./ch03_01"); // 여러개 다른 방법인데 같은 변수만을 넣을 수 있음
+const calc = require("./ch03_01");
 const nums = calc(2, 3);
 console.log(nums.add());
 console.log(nums.subtract());
