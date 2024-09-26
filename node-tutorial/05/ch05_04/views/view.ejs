@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>게시글 보기</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><%=post.title %></h1>
+      <section>
+        <h2><%=post.wirte %></h2>
+        <p><%=post.content %></p>
+      </section>
+      <a href="/list" class="button">목록</a>
+      <a href="/edit" class="button">수정</a>
+      <a href="/list" class="button">삭제</a>
+    </div>
+  </body>
+</html>
