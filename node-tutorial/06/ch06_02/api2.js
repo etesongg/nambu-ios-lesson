@@ -2,8 +2,8 @@ const express = require("express");
 let moment = require("moment");
 const path = require("path");
 const Database = require("better-sqlite3");
-const { channel } = require("diagnostics_channel");
-const { error } = require("console");
+// const { channel } = require("diagnostics_channel");
+// const { error } = require("console");
 
 // database setting
 const db_name = path.join(__dirname, "post.db");

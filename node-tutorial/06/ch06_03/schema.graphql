@@ -1,0 +1,76 @@
+// API의 읽기 작업을 정의
+type Query {
+    hello: String
+    getPost(id: ID!): Post
+}
+
+// 커스텀 자료형
+type POST { 
+    id: ID!
+    title: String!
+    content: String!
+}
+
+// API의 쓰기 작업을 정의
+type Mutation {
+    createPost(input: PostInput): Post // PostInput 타입의 데이터를 입력으로 받고 생성된 게시글(Post)을 반환
+    updatePost(id: ID!, input: PostInput): Post
+    deletePost(id: ID!) // 반환값이 명시되어 있지 않으면 일반적으로 성공 여부를 나타내는 불리언 값으로 처리 됨
+}
+
+input PostInput {
+    title: String!
+    content: String!
+}
+
+// 기본타입
+// Int, Float, String, Boolean
+// ID: 고유 식별자(문자열)
+// 커스텀 타입
+
+// hello 데이터를 가져오고, id가 1번인 게시글의 데이터 요청 쿼리문(select)
+{
+    hello
+    getPost(id: "1") {
+        id
+        title
+        content
+    }
+}
+
+// ql 요청 -> 게시글 생성 요청(insert, update, delete)
+mutation {
+    createPost(input: {title: "New Post", content: "New Content"}) {
+        id
+        title
+        content
+    }
+}
+
+// ql 응답 -> 게시글 생성 후 응답 결과
+{
+    "data": {
+        "createPost": {
+            "id": 1,
+            "title": "New Post",
+            "content": "New Content"
+        }
+    }
+}
+
+mutation {
+    updatePost(id: "1", input: {title: "Updated Post Title", content: "Updated content for the post."}) {
+        id
+        title
+        content
+    }
+}
+{
+    "data": {
+        "updatePost": {
+            "id": "1",
+            "title": "Updated Post Title",
+            "content": "Updated content for the post."
+        }
+    }
+}
