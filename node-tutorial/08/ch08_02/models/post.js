@@ -20,5 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     content: DataTypes.STRING,
     author: DataTypes.STRING(50),
   });
+  Post.associate = function (models) {
+    Post.hasMany(models.Comment);
+  };
   return Post;
 };
