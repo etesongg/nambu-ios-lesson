@@ -3,7 +3,6 @@ module.exports = (sequelize, DataTypes) => {
         id integer primary key autoincrement,
         title TEXT not null,
         content varchar,
-        author varchar(50),
         ) 
    */
   const Post = sequelize.define("Post", {
@@ -19,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     content: DataTypes.STRING,
     author: DataTypes.STRING(50),
+    filename: DataTypes.STRING,
   });
   Post.associate = function (models) {
     Post.hasMany(models.Comment);
