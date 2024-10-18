@@ -1,12 +1,14 @@
 const express = require("express");
 const postRoute = require("./routers/postRoute");
+const authRoute = require("./routers/authRoute");
 const models = require("./models");
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 app.use("/posts", postRoute); // /posts 불리면 postRoute로 감
-// app.use("/uses", usesRoute);
+app.use("/auth", authRoute);
+// app.use("/user", userRoute);
 // app.use("/comments", commentsRoute);
 // app.use("/products", productsRoute);
 

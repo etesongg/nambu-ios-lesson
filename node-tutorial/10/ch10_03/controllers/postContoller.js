@@ -7,7 +7,15 @@ postContoller.createPost = async (req, res) => {
   // db 가져올때 에러 날 수 있기 때문에 try catch 사용
   try {
     // {"title": "a", "content": "b", "userId": 1} = req.body
-    const post = await postService.createPost(req.body);
+    // const post = await postService.createPost(req.body);
+
+    const user = req.user; // login된 유저정보가 req.user에 저장됨
+    const post = await postService.createPost({
+      title: req.body.title,
+      content: req.body.content,
+      userId: user.id,
+    });
+
     res.status(201).json({ data: post });
   } catch (e) {
     res.status(500).json({ error: e.message });
