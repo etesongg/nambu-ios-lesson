@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nick</key>
+		<string>RM</string>
+		<key>image</key>
+		<string>bts1.png</string>
+		<key>desc</key>
+		<string>1번째 멤버</string>
+	</dict>
+	<dict>
+		<key>nick</key>
+		<string>JIN</string>
+		<key>image</key>
+		<string>bts2.png</string>
+		<key>desc</key>
+		<string>2번째 멤버</string>
+	</dict>
+	<dict>
+		<key>nick</key>
+		<string>SUGA</string>
+		<key>image</key>
+		<string>bts3.png</string>
+		<key>desc</key>
+		<string>3번째 멤버</string>
+	</dict>
+	<dict>
+		<key>nick</key>
+		<string>JHOPE</string>
+		<key>image</key>
+		<string>bts4.png</string>
+		<key>desc</key>
+		<string>4번째 멤버</string>
+	</dict>
+	<dict>
+		<key>nick</key>
+		<string>JIMIN</string>
+		<key>image</key>
+		<string>bts5.png</string>
+		<key>desc</key>
+		<string>5번째 멤버</string>
+	</dict>
+	<dict>
+		<key>nick</key>
+		<string>V</string>
+		<key>image</key>
+		<string>bts6.png</string>
+		<key>desc</key>
+		<string>6번째 멤버</string>
+	</dict>
+	<dict>
+		<key>nick</key>
+		<string>JUNGKOOK</string>
+		<key>image</key>
+		<string>bts7.png</string>
+		<key>desc</key>
+		<string>7번째 멤버</string>
+	</dict>
+</array>
+</plist>
