@@ -60,32 +60,32 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="T5l-L2-5Ac">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="ysQ-e2-v5K">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kDl-eY-WOU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kDl-eY-WOU">
                                 <rect key="frame" x="16" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="arrowshape.turn.up.left" catalog="system"/>
+                                <connections>
+                                    <action selector="actPrev:" destination="YnI-Pw-rrp" eventType="touchUpInside" id="YW1-5B-9tk"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="actPrev:" destination="YnI-Pw-rrp" id="rv7-RY-xRF"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fbq-GZ-ex4">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hYt-F4-DSH">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="hYt-F4-DSH">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="arrowshape.turn.up.forward" catalog="system"/>
+                                <connections>
+                                    <action selector="actNext:" destination="YnI-Pw-rrp" eventType="touchUpInside" id="bjF-kS-TE8"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="actNext:" destination="YnI-Pw-rrp" id="jUz-Pg-PC3"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnNext" destination="fbq-GZ-ex4" id="qgF-ZQ-yFZ"/>
-                        <outlet property="btnPrev" destination="ysQ-e2-v5K" id="DvE-PN-0Dy"/>
-                        <outlet property="searchBar" destination="ZIj-bV-V9h" id="k2j-oS-Mly"/>
+                        <outlet property="btnNext" destination="hYt-F4-DSH" id="gnJ-Su-ktE"/>
+                        <outlet property="btnPrev" destination="kDl-eY-WOU" id="U6d-Cq-qHU"/>
+                        <outlet property="searchBar" destination="xzf-au-XHq" id="Y2N-sg-yDz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xT2-3J-nIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

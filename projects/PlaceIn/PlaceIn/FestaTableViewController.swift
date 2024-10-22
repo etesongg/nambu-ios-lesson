@@ -13,7 +13,7 @@ class FestaTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     var pickerView: UIPickerView!
     var areaData: [(code: String, name: String)] = []
-    let apiKey = "xozPkq%2BiV%2FoJagSV4GOgGCuilEOLlfDGKUpqMzbzvKYOmP%2FIAzBXoXrJZW%2B81iqTf%2B%2B7NSPW8prKqZP0CuL2xA%3D%3D"
+    let apiKey = ""
     var itemArray: [[String: Any]]?
     var areaCode = 1
     var keyword: String?

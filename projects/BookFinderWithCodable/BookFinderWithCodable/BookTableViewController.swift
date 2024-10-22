@@ -8,20 +8,24 @@
 import UIKit
 
 class BookTableViewController: UITableViewController {
-    @IBOutlet weak var btnPrev: UIBarButtonItem!
-    @IBOutlet weak var btnNext: UIBarButtonItem!
-    @IBOutlet var searchBar: UITableView!
+    @IBOutlet weak var btnPrev: UIButton!
+    @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
     var books:[Book]?
+    
     
     var page = 1 {
         didSet {
             btnPrev.isEnabled = page > 1
+            search(query: searchBar.text, page: page)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        search(query: "한강", page: page)
+        search(query: searchBar.text, page: page)
+        btnPrev.isEnabled = false
+        btnNext.isEnabled = false
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -42,7 +46,8 @@ class BookTableViewController: UITableViewController {
         return books?.count ?? 0
     }
     
-    func search(query:String, page:Int){
+    func search(query:String?, page:Int){
+        let query = query?.isEmpty == true ? "해" : query ?? "해"
         let str = "https://dapi.kakao.com/v3/search/book?query=\(query)&page=\(page)"
         guard let strURL = str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let url = URL(string: strURL)
@@ -56,7 +61,13 @@ class BookTableViewController: UITableViewController {
                 let result = try? JSONDecoder().decode(Result.self, from: data) // 모델링 해준 Result임
             else { return }
             self.books = result.Books
+            
+            let isEnd = result.meta.isEnd
+            let pageableCount = result.meta.pageableCount
+            let totalCount = result.meta.totalCount
+            
             DispatchQueue.main.async{
+                self.btnNext.isEnabled = !isEnd
                 self.tableView.reloadData()
             }
         }
@@ -147,4 +158,11 @@ class BookTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension BookTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        page = 1
+        searchBar.resignFirstResponder()
+    }
 }

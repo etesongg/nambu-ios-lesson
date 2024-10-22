@@ -82,7 +82,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post("/create", (req, res) => {
   const createdAt = moment().format("YYYY-MM-DD");
-  let sql = `insert into posts(title, content, author, createdAt) values('${req.body.title}','${req.body.content}','${req.body.author}','${createdAt}')`;
+  const { title, content, author } = req.body;
+  let sql = `insert into posts(title, content, author, createdAt) values('${title}','${content}','${author}','${createdAt}')`;
   db.run(sql, [], (err) => {
     if (err) {
       res.status(500).send("Internal Server Error");
