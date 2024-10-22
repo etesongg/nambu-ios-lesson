@@ -29,9 +29,19 @@ class MainTableViewController: UITableViewController {
             }
             return
         }
-        bts = try? NSMutableArray(contentsOf: targetURL, error: ()) // document에서 읽어오는중
+        bts = try? NSMutableArray(contentsOf: targetURL, error: ())
         self.navigationItem.rightBarButtonItem = editButtonItem
     }
+    
+    // unwind segue가 도착하고서 실행돼야하기 때문에 main에 만들어 줘야 함
+    @IBAction func retrunFromAdd(segue:UIStoryboardSegue){
+        guard let bts else { return }
+//        tableView.reloadData() // 쓸데없이 전체 리로드 중, 낭비임
+        let indexPath = IndexPath(row: bts.count-1, section: 0)
+        tableView.insertRows(at: [indexPath], with: .fade) // indexPath에 맞는 selfRow가 실행됨, 추가된 인덱스만 로드되는거임
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
+    
 
     // MARK: - Table view data source
 
@@ -54,8 +64,15 @@ class MainTableViewController: UITableViewController {
         let lblNick = cell.viewWithTag(2) as? UILabel
         let lblDesc = cell.viewWithTag(3) as? UILabel
         
+        // 이미지 보이게 하기
         if let imageName = member["image"] { // 여기서는 if let이 더 적합함. imageName이 없다고 다른 요소도 안 보여주는건 이상
-            imgProfile?.image = UIImage(named: imageName)
+            if imageName.starts(with: "bts"){
+                imgProfile?.image = UIImage(named: imageName)
+            } else {
+                let path = urlWithFileName(imageName, type: .png).path()
+                imgProfile?.image = UIImage(contentsOfFile: path)
+            }
+            
         }
         
         lblNick?.text = member["nick"] // text는 기본적으로 옵셔널(String?)로 정의 하기 때문에 언래핑 필요없음
@@ -115,14 +132,15 @@ class MainTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let addVc = segue.destination as? AddViewController else { return }
+        addVc.bts = bts
     }
-    */
+    
+    
 
 }
