@@ -15,7 +15,6 @@
 		E4DAEA6C2CC76FE70018E512 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAEA6B2CC76FE70018E512 /* BookTableViewController.swift */; };
 		E4DAEA702CC770D60018E512 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAEA6F2CC770D60018E512 /* Book.swift */; };
 		E4DAEA722CC77C020018E512 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E4DAEA712CC77C020018E512 /* .gitignore */; };
-		E4DAEA742CC77F240018E512 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAEA732CC77F240018E512 /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		E4DAEA6B2CC76FE70018E512 /* BookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		E4DAEA6F2CC770D60018E512 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		E4DAEA712CC77C020018E512 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		E4DAEA732CC77F240018E512 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				E4DAEA6E2CC770940018E512 /* ViewControllers */,
 				E4DAEA6D2CC7708B0018E512 /* Models */,
 				E4DAEA6B2CC76FE70018E512 /* BookTableViewController.swift */,
-				E4DAEA732CC77F240018E512 /* Key.swift */,
 				E4DAEA572CC76E940018E512 /* AppDelegate.swift */,
 				E4DAEA592CC76E940018E512 /* SceneDelegate.swift */,
 				E4DAEA5D2CC76E940018E512 /* Main.storyboard */,
@@ -165,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DAEA702CC770D60018E512 /* Book.swift in Sources */,
-				E4DAEA742CC77F240018E512 /* Key.swift in Sources */,
 				E4DAEA582CC76E940018E512 /* AppDelegate.swift in Sources */,
 				E4DAEA6C2CC76FE70018E512 /* BookTableViewController.swift in Sources */,
 				E4DAEA5A2CC76E940018E512 /* SceneDelegate.swift in Sources */,
