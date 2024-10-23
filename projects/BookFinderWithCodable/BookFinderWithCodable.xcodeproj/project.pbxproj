@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4B12B2A2CC7F797001CF4BA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B12B292CC7F797001CF4BA /* Key.swift */; };
 		E4DAEA582CC76E940018E512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAEA572CC76E940018E512 /* AppDelegate.swift */; };
 		E4DAEA5A2CC76E940018E512 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DAEA592CC76E940018E512 /* SceneDelegate.swift */; };
 		E4DAEA5F2CC76E940018E512 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E4DAEA5E2CC76E940018E512 /* Base */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E4B12B292CC7F797001CF4BA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		E4DAEA542CC76E940018E512 /* BookFinderWithCodable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookFinderWithCodable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DAEA572CC76E940018E512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4DAEA592CC76E940018E512 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				E4DAEA602CC76E960018E512 /* Assets.xcassets */,
 				E4DAEA622CC76E960018E512 /* LaunchScreen.storyboard */,
 				E4DAEA652CC76E960018E512 /* Info.plist */,
-				E4B12B292CC7F797001CF4BA /* Key.swift */,
 			);
 			path = BookFinderWithCodable;
 			sourceTree = "<group>";
@@ -165,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4DAEA702CC770D60018E512 /* Book.swift in Sources */,
-				E4B12B2A2CC7F797001CF4BA /* Key.swift in Sources */,
 				E4DAEA582CC76E940018E512 /* AppDelegate.swift in Sources */,
 				E4DAEA6C2CC76FE70018E512 /* BookTableViewController.swift in Sources */,
 				E4DAEA5A2CC76E940018E512 /* SceneDelegate.swift in Sources */,
