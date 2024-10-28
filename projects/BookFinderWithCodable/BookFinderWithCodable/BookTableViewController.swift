@@ -48,11 +48,8 @@ class BookTableViewController: UITableViewController {
     
     func search(query:String?, page:Int){
         let str: String
-        if let query = query, !query.isEmpty {
-            str = "https://dapi.kakao.com/v3/search/book?query=\(query)&page=\(page)"
-        } else {
-            str = "https://dapi.kakao.com/v3/search/book?query=\(query)&page=\(page)"
-        }
+        guard let query else { return }
+        str = "https://dapi.kakao.com/v3/search/book?query=\(query)&page=\(page)"
         
         guard let strURL = str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let url = URL(string: strURL)
