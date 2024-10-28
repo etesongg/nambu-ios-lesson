@@ -26,6 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         print("didupdate location : \(location.coordinate.latitude): \(location.coordinate.longitude)")
+        manager.stopUpdatingLocation() // didUpdateLocations안에 stopUpdatingLocation를 추가해주면 한번만 가져옴
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E417C79F2CCF5ABA00F8A8D7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417C79E2CCF5ABA00F8A8D7 /* Key.swift */; };
 		E417C7A12CCF5B0100F8A8D7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E417C7A02CCF5B0100F8A8D7 /* .gitignore */; };
 		E4DE8AB82CCF483B00B89FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE8AB72CCF483B00B89FD0 /* AppDelegate.swift */; };
 		E4DE8ABA2CCF483B00B89FD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE8AB92CCF483B00B89FD0 /* SceneDelegate.swift */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E417C79E2CCF5ABA00F8A8D7 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Key.swift; path = Models/Key.swift; sourceTree = "<group>"; };
 		E417C7A02CCF5B0100F8A8D7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E4DE8AB42CCF483B00B89FD0 /* BookFinderWithAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookFinderWithAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DE8AB72CCF483B00B89FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 			children = (
 				E4DE8AD72CCF499100B89FD0 /* Models */,
 				E4DE8AB72CCF483B00B89FD0 /* AppDelegate.swift */,
-				E417C79E2CCF5ABA00F8A8D7 /* Key.swift */,
 				E4DE8ADA2CCF4DDA00B89FD0 /* DetailViewController.swift */,
 				E4DE8ACB2CCF486100B89FD0 /* BookTableViewController.swift */,
 				E4DE8AB92CCF483B00B89FD0 /* SceneDelegate.swift */,
@@ -176,7 +173,6 @@
 				E4DE8ADB2CCF4DDA00B89FD0 /* DetailViewController.swift in Sources */,
 				E4DE8AD92CCF49A100B89FD0 /* Book.swift in Sources */,
 				E4DE8ABA2CCF483B00B89FD0 /* SceneDelegate.swift in Sources */,
-				E417C79F2CCF5ABA00F8A8D7 /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
