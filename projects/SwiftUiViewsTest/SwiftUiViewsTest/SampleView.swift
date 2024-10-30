@@ -26,13 +26,13 @@ struct PickerView: View {
 }
 
 struct DatePickerView: View {
-    @State var selectedDate: Date = Date()
+    @State var selectedDate: Date = Date() // 프로퍼티
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-mm-dd hh:mm:ss"
-        return formatter
+        return formatter // 리턴이 있으니 연산 프로퍼티
     }
-    var body: some View {
+    var body: some View { // 연산 프로퍼티
         VStack {
             Text(selectedDate, formatter: dateFormatter)
                 .font(.title).padding(.top, 15)
