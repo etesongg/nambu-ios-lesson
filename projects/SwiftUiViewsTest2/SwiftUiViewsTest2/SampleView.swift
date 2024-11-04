@@ -223,5 +223,5 @@ struct GeometryTest: View {
 }
 
 #Preview {
-    GeometryTest()
+    LabelView()
 }
