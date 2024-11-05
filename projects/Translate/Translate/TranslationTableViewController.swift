@@ -12,7 +12,8 @@ class TranslationTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var translation: [Translation]?
-
+    let TRANS_ENDPOINT = "https://api.cognitive.microsofttranslator.com"
+    let TRANS_KEY = "C3pZnYIv9o3UA3GuegwMQWmbTkPa0XVcCyBI1mIKK9DRqO7YoJKLJQQJ99AKACYeBjFXJ3w3AAAbACOGV4xv"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class TranslationTableViewController: UITableViewController {
         // 리퀘스트
         let alamo = AF.request(url, method: .post, parameters: params, encoding: ArrayEncoding(), headers: headers)
         
-        alamo.responseDecodable(of: [TranslationResult].self) { response in // 응답 데이터를 [TranslationResult] 타입으로 디코딩하라고 지시
+        alamo.responseDecodable(of: [TranslationResult].self) { response in // 응답 데이터를 [TranslationResult] 타입으로 디코딩
             switch response.result {
             case .success(let results):
                 self.translation = results.first?.translations
@@ -48,12 +49,12 @@ class TranslationTableViewController: UITableViewController {
             
         }
         
-        // httpBody에서 데이터 꺼내기(디버깅)
-        if let urlRequest = try? alamo.convertible.asURLRequest(),
-           let httpBody = urlRequest.httpBody,
-           let bodyString = String(data: httpBody, encoding: .utf8) {
-            print("Request body: \(bodyString)")
-        }
+//        // httpBody에서 데이터 꺼내기(디버깅)
+//        if let urlRequest = try? alamo.convertible.asURLRequest(),
+//           let httpBody = urlRequest.httpBody,
+//           let bodyString = String(data: httpBody, encoding: .utf8) {
+//            print("Request body: \(bodyString)")
+//        }
 }
 
     // MARK: - Table view data source
