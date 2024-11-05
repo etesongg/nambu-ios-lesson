@@ -10,8 +10,7 @@ import Alamofire
 
 class MainTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
-    let TRANS_ENDPOINT = "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0"
-    let TRANS_KEY = "C3pZnYIv9o3UA3GuegwMQWmbTkPa0XVcCyBI1mIKK9DRqO7YoJKLJQQJ99AKACYeBjFXJ3w3AAAbACOGV4xv"
+
     let region = "eastus"
     let targetLanguage = "en,ja,fr,zh,es"
     var translations:[Translation]?
