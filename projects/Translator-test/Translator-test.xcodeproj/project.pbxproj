@@ -15,6 +15,7 @@
 		E4DE644C2CD9A8E3004370D0 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE644B2CD9A8E3004370D0 /* MainTableViewController.swift */; };
 		E4DE644F2CD9A9BF004370D0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4DE644E2CD9A9BF004370D0 /* Alamofire */; };
 		E4DE64512CD9AB07004370D0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE64502CD9AB07004370D0 /* Model.swift */; };
+		E4DE64532CD9C2E1004370D0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DE64522CD9C2E1004370D0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E4DE64452CD9A82F004370D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4DE644B2CD9A8E3004370D0 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		E4DE64502CD9AB07004370D0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E4DE64522CD9C2E1004370D0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				E4DE64422CD9A82F004370D0 /* LaunchScreen.storyboard */,
 				E4DE64452CD9A82F004370D0 /* Info.plist */,
 				E4DE64502CD9AB07004370D0 /* Model.swift */,
+				E4DE64522CD9C2E1004370D0 /* DetailViewController.swift */,
 			);
 			path = "Translator-test";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				E4DE64382CD9A82E004370D0 /* AppDelegate.swift in Sources */,
 				E4DE644C2CD9A8E3004370D0 /* MainTableViewController.swift in Sources */,
+				E4DE64532CD9C2E1004370D0 /* DetailViewController.swift in Sources */,
 				E4DE643A2CD9A82E004370D0 /* SceneDelegate.swift in Sources */,
 				E4DE64512CD9AB07004370D0 /* Model.swift in Sources */,
 			);

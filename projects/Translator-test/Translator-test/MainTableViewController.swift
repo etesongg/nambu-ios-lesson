@@ -64,6 +64,13 @@ extension MainTableViewController: UISearchBarDelegate {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
+                // 코드로 화면 전환
+                let detailVC = self.storyboard?.instantiateViewController(identifier: "detail") as? DetailViewController // storyboard의 identifier 설정
+                detailVC?.result = self.translations?.first?.text
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(detailVC!, animated: true)
+                }
+                
             case .failure(let e):
                 print(e.localizedDescription)
             }
