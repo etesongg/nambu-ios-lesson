@@ -12,8 +12,6 @@ class TranslationTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     var translation: [Translation]?
-    let TRANS_ENDPOINT = "https://api.cognitive.microsofttranslator.com"
-    let TRANS_KEY = "C3pZnYIv9o3UA3GuegwMQWmbTkPa0XVcCyBI1mIKK9DRqO7YoJKLJQQJ99AKACYeBjFXJ3w3AAAbACOGV4xv"
     
     override func viewDidLoad() {
         super.viewDidLoad()
