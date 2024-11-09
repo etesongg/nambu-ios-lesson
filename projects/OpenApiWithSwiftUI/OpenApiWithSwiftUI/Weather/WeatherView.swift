@@ -16,7 +16,7 @@ struct WeatherView: View {
 //                image in
 //                image.resizable().frame(width: 30, height: 30)
 //            } placeholder: {
-//                Image(systemName: "sun.main")
+//                Image(systemName: "sun.min")
 //            }
             
             if let temp = provider.temp {
@@ -29,8 +29,5 @@ struct WeatherView: View {
 }
 
 #Preview {
-    let provider = WeatherProvider()
-    WeatherView().environmentObject(provider).onAppear {
-        provider.getWeather()
-    }
+    WeatherView().environmentObject(WeatherProvider())
 }

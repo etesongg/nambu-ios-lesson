@@ -16,6 +16,11 @@ struct MainView: View {
                     Image(systemName: "books.vertical")
                     Text("책검색")
                 }
+            BlogList()
+                .tabItem {
+                    Image(systemName: "keyboard.fill")
+                    Text("블로그")
+                }
             ForecaseView()
                 .tabItem {
                     Image(systemName: "sun.min")

@@ -58,7 +58,7 @@ struct BlogMeta: Codable {
     }
 }
 
-struct BResult: Codable {
+struct BlogRoot: Codable {
     var meta: BlogMeta
     var blogs: [Blog]
     

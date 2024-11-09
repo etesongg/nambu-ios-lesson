@@ -10,10 +10,9 @@ import Alamofire
 
 class WeatherProvider:ObservableObject {
     @Published var main:String = ""
-    @Published var description = ""
-    @Published var icon = ""
+    @Published var description:String = ""
+    @Published var icon:String = ""
     @Published var temp:Double?
-    @Published var isError = false
     let endPoint = "https://api.openweathermap.org/data/2.5/weather"
     let appid = "e60241c0f4d9ba4af2de1c75ba7a2162"
     
@@ -29,10 +28,8 @@ class WeatherProvider:ObservableObject {
                     self.temp = result.main.temp
                     self.description = weather.description
                     self.icon = "https://openweathermap.org/img/wn/\(weather.icon)@2x.png"
-                    self.isError = false
                 case .failure(let error):
                     print(error.localizedDescription)
-                    self.isError = true
                 }
             }
     }

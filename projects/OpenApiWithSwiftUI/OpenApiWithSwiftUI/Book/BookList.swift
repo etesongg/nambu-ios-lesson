@@ -30,7 +30,6 @@ struct BookList: View {
                     }
                 
                 }
-
                 .listStyle(.plain)
                 .navigationTitle("책검색")
                 .navigationBarTitleDisplayMode(.inline)

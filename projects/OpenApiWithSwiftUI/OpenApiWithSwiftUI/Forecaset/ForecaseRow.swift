@@ -20,7 +20,7 @@ struct ForecaseRow: View {
                     AsyncImage(url: URL(string: strURL)) { image in
                         image.resizable().frame(width: 50, height: 50)
                     } placeholder: {
-                        Image(systemName: "sun.main")
+                        Image(systemName: "sun.min")
                     }
                     Text(forecast.weather[0].description)
                 }

@@ -24,7 +24,7 @@ class BookFinder:ObservableObject {
                 switch response.result {
                 case .success(let bootRoot):
                     self.books = bootRoot.books
-                    print(self.books)
+//                    print(self.books)
                     self.isEnd = bootRoot.meta.isEnd
                     self.isError = false
                 case .failure(let error):

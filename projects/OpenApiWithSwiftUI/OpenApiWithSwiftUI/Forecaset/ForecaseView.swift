@@ -15,30 +15,32 @@ struct ForecaseView: View {
                 SearchBar(searchText: $city) {
                     provider.getForecase(city: city)
                 }
-            }
-                if let forecasts = provider.list {
-                    List(forecasts) { forecasts in
+                
+                if let forecasts = provider.list { // forecaseprovider에서 list를 옵셔널로 만들어서 언래핑해주기
+                    List(forecasts) { forecast in
                         NavigationLink {
-                            ForecaseRow(forecast: forecasts)
+                            ForecaseRow(forecast: forecast)
                         } label: {
-                            ForecaseRow(forecast: forecasts)
+                            ForecaseRow(forecast: forecast)
                         }
-                        
-                }.listStyle(.plain)
-                        .navigationTitle("일기예보")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .toolbar {
-                            ToolbarItem(placement: .topBarLeading) {
-                                WeatherView()
-                            }
-                        }
+                    }
+                    .listStyle(.plain)
                 } else {
                     EmptyView()
+                }
+            }
+            .navigationTitle("일기예보")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    WeatherView()
+                }
             }
         } detail: {
-            
+
         }
-    }
+        
+        }
 }
 
 #Preview {
