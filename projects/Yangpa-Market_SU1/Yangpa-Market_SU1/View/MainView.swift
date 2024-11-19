@@ -8,15 +8,26 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var memberVM:MemberViewModel //
+    @EnvironmentObject var memberVM:MemberViewModel
+    @EnvironmentObject var saleVM:SaleViewModel
     var body: some View {
-        SaleListView().padding()
-        Button("로그아웃") {
-            memberVM.isLoggedIn = false
-        }
+        TabView {
+            SaleListView()
+                .tabItem {
+                Image(systemName: "list.bullet")
+                Text("상품목록")
+            }
+            Text("카카오맵")
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("카카오맵")
+                }
+            }
     }
 }
 
 #Preview {
-    MainView()
+    let memverVM = MemberViewModel()
+    let saleVM = SaleViewModel()
+    MainView().environmentObject(memverVM).environmentObject(saleVM)
 }

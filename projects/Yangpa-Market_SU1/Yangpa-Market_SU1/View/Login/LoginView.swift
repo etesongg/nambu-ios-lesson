@@ -15,8 +15,8 @@ struct LoginView: View {
     var body: some View {
         VStack{
             VStack {
-                LoginTextField(icon: "person.fill", placeholder: "ID를 입력하시오.", text: $userId)
-                LoginTextField(icon: "lock.fill", placeholder: "비밀번호를 입력하시오.", text: $password, isSecured: true)
+                CustomTextField(icon: "person.fill", placeholder: "ID를 입력하시오.", text: $userId)
+                CustomTextField(icon: "lock.fill", placeholder: "비밀번호를 입력하시오.", text: $password, isSecured: true)
             }.padding(.bottom, 20)
             
             VStack {

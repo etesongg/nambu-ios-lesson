@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Document: Codable, Identifiable{
+struct Document: Codable, Identifiable, Equatable{ // Equatable 이걸 지정해야 무한스크롤 가능(if sale == saleVM.sales.last를 비교할 수 있음
     let id: Int
     let productName: String
     let description: String

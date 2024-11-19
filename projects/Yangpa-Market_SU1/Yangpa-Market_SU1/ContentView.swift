@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let memberVM = MemberViewModel()
+    let saleVM = SaleViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        EntryView()
+            .environmentObject(memberVM)
+            .environmentObject(saleVM)
     }
 }
 

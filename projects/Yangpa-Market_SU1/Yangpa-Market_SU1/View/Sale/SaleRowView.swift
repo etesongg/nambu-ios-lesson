@@ -12,7 +12,7 @@ struct SaleRowView: View {
     var sale:Document
     var body: some View {
         HStack(spacing: 20) {
-            let strURL = "https://sayangpajsh1115.blob.core.windows.net/yangpa/\(sale.photo)"
+            let strURL = "https://sayangpa.blob.core.windows.net/yangpa/\(sale.photo)"
             AsyncImage(url: URL(string: strURL)) { image in
                 image.resizable().aspectRatio(contentMode: .fill) // fit으로 하면 가로 세로 어쩌구 보기 안 좋음
                     .frame(width: 70, height: 70)

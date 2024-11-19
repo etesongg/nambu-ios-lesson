@@ -19,6 +19,9 @@ class MemberViewModel:ObservableObject {
     
     let endPoint = "http://localhost:3000"
     
+    init(){ // 이렇게 하면 처음 로그인화면 안 보여줌
+        self.isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+    }
     func login(userName:String, password:String){
         SVProgressHUD.show()
         let url = "\(endPoint)/members/sign-in"

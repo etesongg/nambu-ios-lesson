@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginTextField: View {
+struct CustomTextField: View {
     var icon:String
     var placeholder:String
     @Binding var text:String // 상위뷰에서 사용하기 때문에 binding
@@ -35,6 +35,6 @@ struct LoginTextField: View {
 }
 
 #Preview {
-    LoginTextField(icon: "person.fill", placeholder: "사용자 ID를 입력하시오.", text: .constant("song"))
-    LoginTextField(icon: "lock.fill", placeholder: "사용자 비밀번호를 입력하시오.", text: .constant("1234"), isSecured: true)
+    CustomTextField(icon: "person.fill", placeholder: "사용자 ID를 입력하시오.", text: .constant("song"))
+    CustomTextField(icon: "lock.fill", placeholder: "사용자 비밀번호를 입력하시오.", text: .constant("1234"), isSecured: true)
 }
