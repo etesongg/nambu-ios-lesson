@@ -46,5 +46,6 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    let memberVM = MemberViewModel()
+    LoginView().environmentObject(memberVM)
 }
